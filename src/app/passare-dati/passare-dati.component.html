@@ -1,0 +1,13 @@
+<h2 style="text-align: center">Passare Dati Works!</h2>
+
+<!-- passare dati dal parent al child -->
+<div *ngFor="let persona of data">
+  <p>
+    passare dati dal parent al child: {{ persona.nome }} {{ persona.cognome }}
+  </p>
+</div>
+
+<!-- passare dati dal child al parent -->
+ <div style="margin-left: 50px;">
+     <button mat-raised-button (click)="mandaDati()" style="margin-left: 300px;">Manda Dati al parent</button>
+ </div>

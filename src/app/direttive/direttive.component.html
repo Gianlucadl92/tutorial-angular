@@ -1,0 +1,50 @@
+<h2 style="text-align: center">Direttive Works!</h2>
+
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  "
+>
+  <!-- ngIf -->
+  <ng-template *ngIf="isVisible; then bloccoIf; else bloccoElse"></ng-template>
+  <ng-template #bloccoIf>
+    <p>ngIf: sono visibile</p>
+  </ng-template>
+  <ng-template #bloccoElse>
+    <p>ngIf: non sono visibile</p>
+  </ng-template>
+
+  <!-- ngFor -->
+  <ul *ngFor="let persona of persone" style="display: flex">
+    <div *ngIf="persona.isOnline" class="cerchioVerde"></div>
+    <div *ngIf="!persona.isOnline" class="cerchioRosso"></div>
+    <li>ngFor: {{ persona.nome }} {{ persona.cognome }}</li>
+  </ul>
+
+  <!-- ngSwitch -->
+  <div [ngSwitch]="numero">
+    <p *ngSwitchCase="1">ngSwitch uno</p>
+    <p *ngSwitchCase="2">ngSwitch due</p>
+    <p *ngSwitchDefault>default</p>
+  </div>
+
+  <!-- ngStyle -->
+  <ul>
+    <li *ngFor="let persona of persone">
+      <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"></div>
+      <p>ngStyle {{ persona.nome }} {{ persona.cognome }}</p>
+    </li>
+  </ul>
+
+  <!-- ngClass -->
+  <ul>
+    <li *ngFor="let persona of persone; index as i">
+      <div class="cerchio" [ngClass]="persona.isOnline ? 'cerchioOnline' : 'cerchioOffline' ">i</div>
+      <p>ngClass {{ persona.nome }} {{ persona.cognome }}</p>
+    </li>
+  </ul>
+</div>
+<hr>
