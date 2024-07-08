@@ -9,3 +9,13 @@
 <hr>
 
 <app-variabili-template></app-variabili-template>
+
+<!-- crea direttive -->
+<h5 [appCreaDirettive]="colore" defaultColor="blue" style="text-align: center;">crea direttive</h5>
+  <div style="display:flex; justify-content: center; align-items:center">
+    <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('red')">rosso
+    <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('pink')">rosa
+    <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('purple')">viola
+  </div>
+
+<hr>

@@ -26,6 +26,11 @@ export class AppComponent {
   // passare dati dal child al parent
   onRiceviDati(value: string) {
     console.log(value);
-    
+  }
+
+  // crea direttive
+  colore = ''
+  cambiaColoreEvidenziatore(colore: string) {
+    this.colore = colore;
   }
 }

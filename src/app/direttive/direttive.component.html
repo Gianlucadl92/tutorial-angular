@@ -34,7 +34,10 @@
   <!-- ngStyle -->
   <ul>
     <li *ngFor="let persona of persone">
-      <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"></div>
+      <div
+        class="cerchio"
+        [ngStyle]="{ background: persona.isOnline ? 'green' : 'red' }"
+      ></div>
       <p>ngStyle {{ persona.nome }} {{ persona.cognome }}</p>
     </li>
   </ul>
@@ -42,9 +45,14 @@
   <!-- ngClass -->
   <ul>
     <li *ngFor="let persona of persone; index as i">
-      <div class="cerchio" [ngClass]="persona.isOnline ? 'cerchioOnline' : 'cerchioOffline' ">i</div>
+      <div
+        class="cerchio"
+        [ngClass]="persona.isOnline ? 'cerchioOnline' : 'cerchioOffline'"
+      >
+        i
+      </div>
       <p>ngClass {{ persona.nome }} {{ persona.cognome }}</p>
     </li>
   </ul>
 </div>
-<hr>
+<hr />

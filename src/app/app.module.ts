@@ -17,7 +17,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { DirettiveComponent } from './direttive/direttive.component';
 import { PassareDatiComponent } from './passare-dati/passare-dati.component';
-import { VariabiliTemplateComponent } from './variabili-template/variabili-template.component'; // 2 way binding
+import { VariabiliTemplateComponent } from './variabili-template/variabili-template.component';
+import { CreaDirettiveDirective } from './crea-direttive.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { VariabiliTemplateComponent } from './variabili-template/variabili-templ
     BindingComponent,
     DirettiveComponent,
     PassareDatiComponent,
-    VariabiliTemplateComponent
+    VariabiliTemplateComponent,
+    CreaDirettiveDirective,
   ],
   imports: [
     BrowserModule,
