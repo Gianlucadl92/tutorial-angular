@@ -1,0 +1,11 @@
+<h2 style="text-align:center;">Funzioni Pipe Works!</h2>
+
+<p style="text-align:center;">Ciao benvenuti al {{ title | uppercase }}</p>
+<p style="text-align:center;">Data dal 1970 a oggi: {{oggi}}</p>
+<p style="text-align:center;">Data di oggi: {{ oggi | date}}</p>
+<p style="text-align:center;">Data di oggi con orario: {{ oggi | date:'medium' }}</p>
+<p style="text-align:center;">Solo ora: {{ oggi | date:'shortTime' }}</p>
+<p style="text-align:center;">Minuti e Secondi: {{ oggi | date:'mm:ss' }}</p>
+<p style="text-align:center;">Ora Minuti e Secondi: {{ oggi | date:'h:mm:ss' }}</p>
+<p style="text-align:center;">Valuta: {{ numero | currency:'EUR' }}</p>
+<hr>

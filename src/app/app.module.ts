@@ -19,6 +19,8 @@ import { DirettiveComponent } from './direttive/direttive.component';
 import { PassareDatiComponent } from './passare-dati/passare-dati.component';
 import { VariabiliTemplateComponent } from './variabili-template/variabili-template.component';
 import { CreaDirettiveDirective } from './crea-direttive.directive';
+import { FunzioniPipeComponent } from './funzioni-pipe/funzioni-pipe.component';
+import { ServiceProvaComponent } from './service-prova/service-prova.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { CreaDirettiveDirective } from './crea-direttive.directive';
     PassareDatiComponent,
     VariabiliTemplateComponent,
     CreaDirettiveDirective,
+    FunzioniPipeComponent,
+    ServiceProvaComponent,
   ],
   imports: [
     BrowserModule,
