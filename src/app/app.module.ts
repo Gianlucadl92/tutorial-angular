@@ -21,6 +21,9 @@ import { VariabiliTemplateComponent } from './variabili-template/variabili-templ
 import { CreaDirettiveDirective } from './crea-direttive.directive';
 import { FunzioniPipeComponent } from './funzioni-pipe/funzioni-pipe.component';
 import { ServiceProvaComponent } from './service-prova/service-prova.component';
+import { AboutComponent } from './routing/about/about.component';
+import { ContactComponent } from './routing/contact/contact.component';
+import { HomeComponent } from './routing/home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { ServiceProvaComponent } from './service-prova/service-prova.component';
     CreaDirettiveDirective,
     FunzioniPipeComponent,
     ServiceProvaComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
