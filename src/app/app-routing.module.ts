@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './routing/home/home.component';
-import { AboutComponent } from './routing/about/about.component';
-import { ContactComponent } from './routing/contact/contact.component';
+import { ContattiComponent } from './routing/contatti/contatti.component';
+import { ContattoComponent } from './routing/contatto/contatto.component';
+import { NotFoundComponent } from './routing/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: '', pathMatch:'full', redirectTo: '/homepage' },
+  { path: 'homepage', component: HomeComponent },
+  { path: 'contatti', component: ContattiComponent, children: [
+    { path: ':id', component: ContattoComponent },
+  ]},
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({

@@ -1,0 +1,8 @@
+<p style="text-align:center;">Lista Contatti</p>
+
+<div *ngFor="let persona of persone; index as i" style="display: flex; justify-content: center;">
+  <a routerLink="/contatti/{{ i }}"><p>{{ persona.nome }} {{ persona.cognome }}</p></a>
+</div>
+
+<!-- router children -->
+ <router-outlet></router-outlet>
