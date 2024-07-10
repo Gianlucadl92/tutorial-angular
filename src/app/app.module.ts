@@ -25,6 +25,7 @@ import { HomeComponent } from './routing/home/home.component';
 import { ContattiComponent } from './routing/contatti/contatti.component';
 import { ContattoComponent } from './routing/contatto/contatto.component';
 import { NotFoundComponent } from './routing/not-found/not-found.component';
+// import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NotFoundComponent } from './routing/not-found/not-found.component';
     ContattiComponent,
     ContattoComponent,
     NotFoundComponent,
+    // ObservableComponent,
   ],
   imports: [
     BrowserModule,
