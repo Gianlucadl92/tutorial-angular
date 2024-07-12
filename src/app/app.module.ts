@@ -14,7 +14,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DirettiveComponent } from './direttive/direttive.component';
 import { PassareDatiComponent } from './passare-dati/passare-dati.component';
 import { VariabiliTemplateComponent } from './variabili-template/variabili-template.component';
@@ -25,7 +25,9 @@ import { HomeComponent } from './routing/home/home.component';
 import { ContattiComponent } from './routing/contatti/contatti.component';
 import { ContattoComponent } from './routing/contatto/contatto.component';
 import { NotFoundComponent } from './routing/not-found/not-found.component';
+import { DrivenFormComponent } from './driven-form/driven-form.component';
 // import { ObservableComponent } from './observable/observable.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { NotFoundComponent } from './routing/not-found/not-found.component';
     ContattiComponent,
     ContattoComponent,
     NotFoundComponent,
+    DrivenFormComponent,
     // ObservableComponent,
   ],
   imports: [
@@ -55,6 +58,8 @@ import { NotFoundComponent } from './routing/not-found/not-found.component';
     MatInputModule,
     MatFormFieldModule,
     FormsModule, // 2 way binding
+    MatSelectModule,
+    ReactiveFormsModule, // rective form
   ],
   providers: [
     provideClientHydration(),

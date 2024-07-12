@@ -1,0 +1,46 @@
+<h2 style="text-align: center">Driven Form Works!</h2>
+
+<div style="display: flex; justify-content: center; align-items: center">
+  <!-- driven form -->
+  <form #homeform="ngForm" (ngSubmit)="onSubmit(homeform)">
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput type="text" name="nome" ngModel required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" name="email" ngModel required email />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Colori</mat-label>
+      <mat-select name="colore">
+        <mat-option value="rosso">Rosso</mat-option>
+        <mat-option value="blu">Blu</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button type="submit" [disabled]="!homeform.valid">
+      Submit
+    </button>
+  </form>
+
+  <!-- reactive form -->
+   
+  <!-- <form [formGroup]="homeform" (ngSubmit)="onSubmit2()">
+    <mat-form-field>
+      <input matInput type="text" name="nome" formControlName="nome" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" name="email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Colori</mat-label>
+      <mat-select name="colore" formControlName="colore">
+        <mat-option value="rosso">Rosso</mat-option>
+        <mat-option value="blu">Blu</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button type="submit" [disabled]="!homeform.valid">Submit</button>
+  </form> -->
+</div>
+<hr>
